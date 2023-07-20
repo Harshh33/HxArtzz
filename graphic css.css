@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: Avenir, sans-serif;
+}
+
+
+#background-video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 50%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+
+#quad {
+  position: relative;
+  font-size: 0;
+  width: 85%;
+  margin: auto;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  counter-reset: grid;
+  padding: 50px 20px 20px 20px;
+}
+ 
+
+#quad figure {
+  margin: 0;
+  flex: 0 1 calc(50% - 10px);
+  transition: 1s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#quad figure:hover {
+  cursor: pointer;
+  z-index: 4;
+}
+
+#quad figure img,
+#quad figure video {
+  width: 85%;
+  height: auto;
+  object-fit: cover;
+  margin: 5%;
+}
+
+#quad figure figcaption {
+  margin: 0;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  padding: .3rem;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transition: 1s 1s opacity;
+}
+
+.expanded {
+  transform: scale(2);
+  z-index: 5;
+}
+
+#quad figure.expanded figcaption {
+  opacity: 1;
+}
+
+div.full figure:not(.expanded) {
+  pointer-events: none;
+}
+
+#graphic-gallery-content {
+  overflow: scroll;
+}
+
+#graphic-gallery-content::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+.gallery-modal-class {
+  width: 100vw;
+  height: 10vh;
+  top: 1px;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+}
+
+
+.gallery-close-btn-class {
+  display: block;
+  width: var(--button-size);
+  height: var(--button-size);
+  position: relative;
+  overflow: hidden;
+}
+
+.gbtn {
+  position: relative;
+}
+
+.close-button-block {
+  width: 40px;
+  height: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.close-button-block:before,
+.close-button-block:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: calc(55% - 4px);
+  display: block;
+  width: 4px;
+  height: 25px;
+  transform-origin: bottom center;
+  background: white;
+  transition: all ease-out 280ms;
+}
+
+.close-button-block:last-of-type {
+  transform: rotate(180deg);
+}
+
+.in .close-button-block:before {
+  transition-delay: 280ms;
+  transform: translateX(20px) translateY(-20px) rotate(45deg);
+}
+
+.in .close-button-block:after {
+  transition-delay: 280ms;
+  transform: translateX(-22px) translateY(-22px) rotate(-45deg);
+}
+
+
+.out {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.out .close-button-block:before {
+  transform: translateX(-5px) translateY(5px) rotate(45deg);
+}
+
+.out .close-button-block:after {
+  transform: translateX(5px) translateY(5px) rotate(-45deg);
+}
+
+
+.gallery-close-btn-class:hover .in .close-button-block:before {
+  transform: translateX(-5px) translateY(5px) rotate(45deg);
+}
+
+.gallery-close-btn-class:hover .in .close-button-block:after {
+  transform: translateX(5px) translateY(5px) rotate(-45deg);
+}
+
+.gallery-close-btn-class:hover .out .close-button-block:before {
+  transform: translateX(-20px) translateY(20px) rotate(45deg);
+}
+
+.gallery-close-btn-class:hover .out .close-button-block:after {
+  transform: translateX(20px) translateY(20px) rotate(-45deg);
+}
+
+
+#graphic-gallery-content {
+  height: 100vh;
+  width: 100vw;
+}

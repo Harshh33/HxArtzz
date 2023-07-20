@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="graphic css.css">
+</head>
+
+<body>
+  <div id="quad">
+
+    <figure>
+      <img src="GRAPHIC WR/cloud island.png" alt="rose-red-wine">
+      <figcaption>Rose Red Wine</figcaption>
+    </figure>
+
+    <figure>
+      <img src="GRAPHIC WR/astro.png" alt>
+      <figcaption>Green Glass Bottle</figcaption>
+    </figure>
+
+    <figure>
+      <img src="GRAPHIC WR/A3.png" alt>
+      <figcaption>Guinness Barrels, Dublin</figcaption>
+    </figure>
+
+    <figure>
+      <img src="GRAPHIC WR/Encryption.png" alt>
+      <figcaption>Crystal Skull Vodka</figcaption>
+    </figure>
+
+    <figure>
+      <img src="GRAPHIC WR/ganesh chaturthi.png" alt>
+      <figcaption>Crystal Skull Vodka</figcaption>
+    </figure>
+
+    <figure>
+      <img src="GRAPHIC WR/humonoid1.png" alt>
+      <figcaption>Crystal Skull Vodka</figcaption>
+    </figure>
+
+    <figure>
+      <img src="GRAPHIC WR/man.png" alt>
+      <figcaption>Crystal Skull Vodka</figcaption>
+    </figure>
+
+    <figure>
+      <img src="GRAPHIC WR/MUHORRAM.png" alt>
+      <figcaption>Crystal Skull Vodka</figcaption>
+    </figure>
+    
+    <figure>
+      <img src="GRAPHIC WR/nyc.png" alt>
+      <figcaption>Crystal Skull Vodka</figcaption>
+    </figure>
+    
+    <figure>
+      <img src="GRAPHIC WR/SHOES 1.png" alt>
+      <figcaption>Crystal Skull Vodka</figcaption>
+    </figure>
+    
+    <figure>
+      <img src="GRAPHIC WR/yoga.png" alt>
+      <figcaption>Crystal Skull Vodka</figcaption>
+    </figure>
+    
+    <figure>
+      <img src="GRAPHIC WR/wedding logo.png" alt>
+      <figcaption>Crystal Skull Vodka</figcaption>
+    </figure>
+    
+    <figure>
+      <img src="GRAPHIC WR/yoga.png" alt>
+      <figcaption>Crystal Skull Vodka</figcaption>
+    </figure>
+    
+    <figure>
+      <img src="GRAPHIC WR/store.png" alt>
+      <figcaption>Crystal Skull Vodka</figcaption>
+    </figure>
+  </div>
+
+
+  <script>
+    var quadimages = document.querySelectorAll("#quad figure");
+    for (i = 0; i < quadimages.length; i++) {
+      quadimages[i].addEventListener('click', function () {
+        this.classList.toggle("expanded");
+        quad.classList.toggle("full")
+      });
+    }
+
+    const clip = document.querySelectorAll(".hover-to-play");
+    for (let i = 0; i < clip.length; i++) {
+      clip[i].addEventListener("mouseenter", function (e) {
+        clip[i].play();
+      }); clip[i].addEventListener("mouseout", function (e) {
+        clip[i].pause();
+      });
+    }
+    document.getElementById('back-btn').addEventListener('click', function () {
+      window.close();
+    });
+  </script>
+  
+
+</body>
+
+</html>
